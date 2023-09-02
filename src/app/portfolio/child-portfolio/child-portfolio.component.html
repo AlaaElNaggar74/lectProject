@@ -1,0 +1,20 @@
+  <!--Box-Num-1-->
+
+  <div
+    
+    
+  >
+    <a href="">
+      <div
+      [class]="sendPaerntPortFolio.id%2==0 ? 'bg-dark':'bg-dark-subtle'"
+        class="boxCon  d-flex align-items-center justify-content-center rounded-3 border border-2 border-black"
+      >
+        <div>
+            <h4>[ {{ sendPaerntPortFolio.id }} ]</h4>
+          <h3>{{ sendPaerntPortFolio.title }}</h3>
+          <P>{{ sendPaerntPortFolio.description }}</P>
+          <p class="fs-4 text-danger">Price : {{sendPaerntPortFolio.price}} $</p>
+        </div>
+      </div>
+    </a>
+  </div>

@@ -1,0 +1,42 @@
+<div class="to m-auto mt-1 py-2 px-3 bg-success-subtle rounded-2 bg-opacity-50">
+  <h3 class="text-center py-3">All List Of Your Book</h3>
+  <div class="overflow-x-auto rounded-2">
+    <table class="table text-center rounded-2">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Books</th>
+          <th>State</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of eleItems; let i = index">
+          <th>{{ i + 1 }}</th>
+          <td [class]="item.trig ? 'fw-bold' : 'text-decoration-line-through '">
+            {{ item.name }}
+          </td>
+          <!-- <td [class]="">bool && item.id==specId?<del>{{item.name}}</del>:{{item.name}}</td> -->
+          <!-- <td><button class="btn btn-warning fw-bold">Complete</button></td> -->
+          <td>
+            <button
+              [class]="
+                item.trig ? 'comple btn btn-warning' : ' comple btn btn-secondary'
+              "
+              (click)="changex(item.id)"
+            >
+              {{ item.trig ? "Complete" : "Undo" }}
+            </button>
+          </td>
+
+          <!-- <td><button class="btn btn-danger" (click)="deletex(item.id)">Delete</button></td> -->
+          <td>
+            <button class="btn btn-danger" (click)="deletex(item.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

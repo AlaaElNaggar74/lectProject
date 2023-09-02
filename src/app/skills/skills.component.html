@@ -1,0 +1,33 @@
+<div class="bggg bg-dark">
+  <div class="container py-5 text-light">
+    <div class="tex text-center">
+      <h1 class="text-white">Skills</h1>
+      <p class="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+        laudantium. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Asperiores porro consequatur possimus, numquam similique obcaecati
+        aperiam aliquam ducimus facilis. Voluptates non rerum voluptas,
+        laudantium molestias quidem necessitatibus accusamus reiciendis nulla.
+      </p>
+    </div>
+
+    <div class="cotent mt-5">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 text-center">
+          <h1 class="text-white">Progres</h1>
+          <p class="my-1">Lorem ipsum dolor sit amet.</p>
+          <p class="my-1">Lorem ipsum dolor sit amet.</p>
+          <p class="my-1">Lorem ipsum dolor sit amet.</p>
+          <p class="my-1">Lorem ipsum dolor sit amet.</p>
+          <p class="my-1">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md-8">
+          
+          <ng-container *ngFor="let skill of arrSkill">
+            <app-child-skil [sendPaernt]="skill"></app-child-skil>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
